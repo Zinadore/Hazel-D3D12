@@ -11,7 +11,7 @@ namespace Hazel {
 	public:
 		enum class API
 		{
-			None = 0, OpenGL = 1
+			None = 0, OpenGL = 1, D3D12 = 2
 		};
 	public:
 		virtual void Init() = 0;
@@ -22,6 +22,7 @@ namespace Hazel {
 		virtual void DrawIndexed(const Ref<VertexArray>& vertexArray) = 0;
 
 		inline static API GetAPI() { return s_API; }
+		static void SetAPI(API api);
 		static Scope<RendererAPI> Create();
 
 	private:

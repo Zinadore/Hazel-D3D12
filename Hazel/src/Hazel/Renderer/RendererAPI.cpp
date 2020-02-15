@@ -5,7 +5,15 @@
 
 namespace Hazel {
 
-	RendererAPI::API RendererAPI::s_API = RendererAPI::API::OpenGL;
+	RendererAPI::API RendererAPI::s_API = RendererAPI::API::None;
+
+	void RendererAPI::SetAPI(API api)
+	{
+		if (s_API != API::None) {
+			HZ_CORE_ASSERT(false, "Cannot change rendering api once set");
+		}
+		s_API = api;
+	}
 
 	Scope<RendererAPI> RendererAPI::Create()
 	{
