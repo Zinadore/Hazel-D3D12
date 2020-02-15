@@ -21,6 +21,7 @@ namespace Hazel {
 		s_Instance = this;
 
 		RendererAPI::SetAPI(api);
+
 		m_Window = Window::Create();
 		m_Window->SetEventCallback(HZ_BIND_EVENT_FN(Application::OnEvent));
 
