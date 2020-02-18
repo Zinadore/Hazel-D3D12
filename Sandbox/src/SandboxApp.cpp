@@ -9,8 +9,8 @@ class Sandbox : public Hazel::Application
 public:
 	Sandbox(): Hazel::Application(Hazel::RendererAPI::API::D3D12)
 	{
-		// PushLayer(new ExampleLayer());
-		PushLayer(new Sandbox2D());
+		PushLayer(new ExampleLayer());
+		//PushLayer(new Sandbox2D());
 	}
 
 	~Sandbox()
