@@ -19,7 +19,7 @@ namespace Hazel {
 	class Application
 	{
 	public:
-		Application(RendererAPI::API api = RendererAPI::API::OpenGL);
+		Application(RendererAPI::API api = RendererAPI::API::D3D12);
 		virtual ~Application();
 
 		void OnEvent(Event& e);
